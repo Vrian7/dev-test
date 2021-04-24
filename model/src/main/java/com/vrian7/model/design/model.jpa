@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings ptype="MONOLITH" ppkg="com.vrian7.model" epkg="entity" v="5.3" rws="_16192705339792" Pws="_16192705339792" cws="_16192705339792" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16192705339791" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jpa:entity compositePrimaryKeyClass="TrelloBoardPK" abs="false" class="TrelloBoard" v="true" jbn="false" xre="false" m="false" rootElement="_16192705339791" id="_16192706031653">
+        <jpa:ath>brian.barrera</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="Integer" v="true" xvt="" name="code" id="_161927067518012">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="code" unique="false" nullable="true" insertable="true" updatable="true" precision="0"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_161927068613713">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="description" id="_161927069158614">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="description" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="date" id="_161927070230715">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="date" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="created_at" id="_161927071118616">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="created_at" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="updated_at" id="_161927072544317">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="updated_at" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_16192706049216" connected-attribute-id="_161927092180131" v="true" xvt="" name="trelloLists" id="_161927092180332">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_16192706032094">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="TrelloBoard.findAll">
+            <jpa:query>Select e from TrelloBoard e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloBoard.findByCode">
+            <jpa:query>Select t from TrelloBoard t where t.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloBoard.findByName">
+            <jpa:query>Select t from TrelloBoard t where t.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloBoard.findByDescription">
+            <jpa:query>Select t from TrelloBoard t where t.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloBoard.findByDate">
+            <jpa:query>Select t from TrelloBoard t where t.date=:date</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloBoard.findByCreated_at">
+            <jpa:query>Select t from TrelloBoard t where t.created_at=:created_at</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloBoard.findByUpdated_at">
+            <jpa:query>Select t from TrelloBoard t where t.updated_at=:updated_at</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="TrelloListPK" abs="false" class="TrelloList" v="true" jbn="false" xre="false" m="false" rootElement="_16192705339791" id="_16192706049216">
+        <jpa:ath>brian.barrera</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_161927079036118">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="code" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_161927079504219">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="description" id="_161927079793720">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="description" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="date" id="_161927080095421">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="date" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="created_at" id="_161927080128122">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="created_at" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="updated_at" id="_161927080160223">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="updated_at" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_16192706031653" connected-attribute-id="_161927092180332" v="true" xvt="" name="trelloBoard" id="_161927092180131">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:join-column name="ID_TRELLO_BOARD" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many orp="false" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_16192706064879" connected-attribute-id="_161927093988434" v="true" xvt="" name="trelloCards" id="_161927093988635">
+                <jpa:xwm/>
+                <jpa:xm/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_16192706049227">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="TrelloList.findAll">
+            <jpa:query>Select e from TrelloList e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloList.findByCode">
+            <jpa:query>Select t from TrelloList t where t.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloList.findByName">
+            <jpa:query>Select t from TrelloList t where t.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloList.findByDescription">
+            <jpa:query>Select t from TrelloList t where t.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloList.findByDate">
+            <jpa:query>Select t from TrelloList t where t.date=:date</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloList.findByCreated_at">
+            <jpa:query>Select t from TrelloList t where t.created_at=:created_at</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloList.findByUpdated_at">
+            <jpa:query>Select t from TrelloList t where t.updated_at=:updated_at</jpa:query>
+        </jpa:nq>
+        <jpa:table name="trello_list"/>
+    </jpa:entity>
+    <jpa:entity compositePrimaryKeyClass="TrelloCardPK" abs="false" class="TrelloCard" v="true" jbn="false" xre="false" m="false" rootElement="_16192705339791" id="_16192706064879">
+        <jpa:ath>brian.barrera</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="code" id="_161927082941024">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="code" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="name" id="_161927082982625">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="name" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" xvt="" name="description" id="_161927083019426">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="description" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="date" id="_161927083052227">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="date" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="created_at" id="_161927083087328">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="created_at" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" xvt="" name="updated_at" id="_161927083119429">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="updated_at" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="true" primaryKey="false" connected-entity-id="_16192706049216" connected-attribute-id="_161927093988635" v="true" xvt="" name="trelloList" id="_161927093988434">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:join-column name="ID_TRELLO_LIST" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Long" v="true" xvt="" name="id" id="_161927060648910">
+                <jpa:xwm/>
+                <jpa:xm/>
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <jpa:generated-value strategy="DEFAULT"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="TrelloCard.findAll">
+            <jpa:query>Select e from TrelloCard e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloCard.findByCode">
+            <jpa:query>Select t from TrelloCard t where t.code=:code</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloCard.findByName">
+            <jpa:query>Select t from TrelloCard t where t.name=:name</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloCard.findByDescription">
+            <jpa:query>Select t from TrelloCard t where t.description=:description</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloCard.findByDate">
+            <jpa:query>Select t from TrelloCard t where t.date=:date</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloCard.findByCreated_at">
+            <jpa:query>Select t from TrelloCard t where t.created_at=:created_at</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="TrelloCard.findByUpdated_at">
+            <jpa:query>Select t from TrelloCard t where t.updated_at=:updated_at</jpa:query>
+        </jpa:nq>
+    </jpa:entity>
+    <jpa:c/>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_16192705339792">
+            <i ref="_16192706031653" x="79" y="89"/>
+            <i ref="_16192706049216" x="358" y="152"/>
+            <i ref="_16192706064879" x="619" y="209"/>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
